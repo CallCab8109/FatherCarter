@@ -1,5 +1,53 @@
-* {
-    background-color: pink;
-}
+
+body {
+    background: pink;
+    margin: 1rem;
+    padding: 1rem;
+    max-width: 100vw;
+    margin: 2rem auto;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+ .welcome {
+    top: 1;  }
+  nav {
+      border-bottom: 2px solid orange;
+  }
+
+  #pic1{
+    width: 450px;
+  }
+  
+  ol {
+      padding-left: 0;
+  }
+  
+  .crumb {
+      margin-right: 2em;
+      display: inline;
+  }
+  
+  a {
+      color: orange;
+  }
+  
+  a:visited {
+      color: crimson;
+  }
+  
+  
+  input {
+      display: block;
+  }
+  
+
+  .buttons {
+      background-color: yellow;
+      padding: 15px 15px;
+  
+  }
 
 
+
+
+  
