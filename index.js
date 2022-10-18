@@ -1,5 +1,7 @@
 
 const button = document.querySelector('.button')
+const marquee = document.querySelector('#scrolling')
+const wOw = document.querySelector('#wOw')
 console.log('it clicked')
 
 
@@ -18,7 +20,7 @@ const names = [
     "\"Premonitions may be found in candy and beef jerky\" -Father Carter",
     "\"Life isn't always pickles and peaches\" -a random 3rd grader",
     "\"Father, Son, and Holy Ghost. Head, shoulders, knees, and toes, heyyyyy macarena\" -F.C.",
-    "I draw the line at child murder. Should\'t you?",
+    "I draw the line at child murder. Shouldn\'t you?",
     "\"If you go knocking on enough doors to see the devil, eventually he may answer.\" -Unknown",
     "\"Thou shalt not abuse the gift of prophecy\" -Father",
     "\"If you die laughing at your own joke, you will go straight to heaven\" -Father Carter",
@@ -28,16 +30,9 @@ const names = [
 ]
 
 function namePicker () {
-    const namesList = new Set()
-    let namesCopy = [...names]
+    console.log('it works')
     const random = Math.floor(Math.random() * names.length)
-        namesList.add(names[random])
-        namesCopy.splice(random, 0)
-
-    alert([...namesList])
-
+    wOw.innerHTML = names[random]
 }
-
-
 
 button.addEventListener('click', namePicker)
