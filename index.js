@@ -1,8 +1,7 @@
 
-const button = document.querySelector('.button')
+const button = document.querySelector('.pic1')
 const marquee = document.querySelector('#scrolling')
 const wOw = document.querySelector('#wOw')
-console.log('it clicked')
 
 
 const names = [
@@ -26,13 +25,14 @@ const names = [
     "\"If you die laughing at your own joke, you will go straight to heaven\" -Father Carter",
     "\"If someone else dies laughing at your joke, you both go to heaven\" -Father Carter",
     "\"Do not let the worms dictate your lifestyle\" -Unknown",
+
+    
  // ended at april 17 on FC 1:12
 ]
 
 function namePicker () {
-    console.log('it works')
     const random = Math.floor(Math.random() * names.length)
     wOw.innerHTML = names[random]
 }
-
+window.onload = namePicker()
 button.addEventListener('click', namePicker)

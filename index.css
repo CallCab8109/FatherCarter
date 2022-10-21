@@ -1,53 +1,51 @@
 
 body {
-    background: pink;
+    background-color: rgba(247,18,160,255);
+    background-image: url(pics/FCbg.png);
+    background-position-y: 75px;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
     margin: 1rem;
     padding: 1rem;
     max-width: 100vw;
     margin: 2rem auto;
     font-family: "Open Sans", sans-serif;
   }
-  
+
+
+
+
  .welcome {
     top: 1;  }
   nav {
-      border-bottom: 2px solid orange;
+      border-bottom: 2px solid rgb(118, 129, 129);
   }
 
-  #pic1{
-    width: 450px;
-  }
-  
-  ol {
-      padding-left: 0;
-  }
-  
-  .crumb {
-      margin-right: 2em;
-      display: inline;
-  }
-  
-  a {
-      color: orange;
-  }
-  
-  a:visited {
-      color: crimson;
-  }
-  
-  
-  input {
-      display: block;
-  }
+  .pic1{    
+    all: unset;
+    cursor: pointer;
+    width: 150px;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+
+} 
   
 
-.button {
-      background-color: yellow;
-      padding: 15px 15px;
   
-  }
+ .button {
+      background-color: rgba(247,18,160,255);
+      padding: 10px 10px;
+      border-radius: 15px;
+       display: flex;
+      align-items: flex-start;
+      align-content: center;
+  } 
 
+#wOw {
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+}
 
-
-
-  
