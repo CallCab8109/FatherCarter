@@ -25,9 +25,22 @@ const names = [
     "\"If you die laughing at your own joke, you will go straight to heaven\" -Father Carter",
     "\"If someone else dies laughing at your joke, you both go to heaven\" -Father Carter",
     "\"Do not let the worms dictate your lifestyle\" -Unknown",
+    '"Fear the Father, Love the Daddy. That\'s the power of the home depot" -FC',
+    'When Jesus dissapears for 3 days and comes back it\'s a miracle. When i do it i\'m an "alcoholic" and "ruining the easter egg hunt',
+    "Our idols include but are not limited to Shrek, Master Oogway, and Myself",
+    '"Crying is not an emergency, it\'s an expectation"',
+    'Purble Place is one of our heavens',
+    'The air in the morning before a field trip was pure',
+    "We are here for a good time, not a long time",
+    "We celebrate all faiths",
+    "Drake and Josh are guardian angels",
+    "Spread the good worm",
+    '"Or Whatever" = "Amen"',
+    '"You are not exempt from the concequences for your action. You will receive judgement"',
+
 
     
- // ended at april 17 on FC 1:12
+ // ended on april 23 "the devil has been busy with his works"
 ]
 
 function namePicker () {
