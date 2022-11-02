@@ -7,6 +7,7 @@ app.use(cors())
 
 const {home} = require("./controllers/pageCtrl.js")
 
+
 app.get("/", home)
 
 
