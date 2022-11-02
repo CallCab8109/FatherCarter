@@ -9,7 +9,7 @@ const {home, styles} = require("./controllers/pageCtrl.js")
 
 
 app.get("/", home)
-// app.get("css", styles)
+app.get("css", styles)
 
 const { PORT } = process.env
 
