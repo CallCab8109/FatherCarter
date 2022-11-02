@@ -26,7 +26,7 @@ body {
     all: unset;
     cursor: pointer;
     width: 150px;
-    position: fixed;
+    position: relative;
     top: 0px;
     right: 0px;
 
