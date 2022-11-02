@@ -1,7 +1,7 @@
 
 body {
     background-color: rgba(247,18,160,255);
-    background-image: src("/img2");
+    background-image: url("/img2");
     background-position-y: 75px;
     background-position-x: center;
     background-repeat: no-repeat;
