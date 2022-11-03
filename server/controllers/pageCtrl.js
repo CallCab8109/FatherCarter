@@ -18,5 +18,4 @@ module.exports = {
         res.sendFile(path.join(__dirname, "../../pics/FCbg.png"))
     }
 
-
 }

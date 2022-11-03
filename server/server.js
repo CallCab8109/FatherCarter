@@ -15,7 +15,7 @@ var rollbar = new Rollbar({
 });
 
 try {
-    sfrgdtfyg()
+    namePicker()
 } catch {
     rollbar.warning('Button has broken')
 }

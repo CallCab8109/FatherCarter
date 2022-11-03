@@ -1,4 +1,3 @@
-
 const button = document.querySelector('.pic1')
 const marquee = document.querySelector('#scrolling')
 const wOw = document.querySelector('#wOw')
