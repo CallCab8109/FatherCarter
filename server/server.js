@@ -7,7 +7,6 @@ app.use(cors())
 
 const {home, css, js, getImage, getImage2} = require("./controllers/pageCtrl.js")
 
-// include and initialize the rollbar library with your access token
 var Rollbar = require("rollbar");
 var rollbar = new Rollbar({
   accessToken: process.env.ROLLBAR_TOKEN,
@@ -15,8 +14,12 @@ var rollbar = new Rollbar({
   captureUnhandledRejections: true
 });
 
-// record a generic message and send it to Rollbar
-rollbar.log("Hello world!");
+try {
+    sfrgdtfyg()
+} catch {
+    rollbar.warning('Button has broken')
+}
+
 
 app.get("/", home)
 app.get("/css", css)
