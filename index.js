@@ -37,6 +37,7 @@ const names = [
     "Spread the good worm",
     '"Or Whatever" = "Amen"',
     '"You are not exempt from the concequences for your action. You will receive judgement"',
+    '"Sometimes you don\'t realize the wind is pushing you, but it is" -Jared Collier'
 
 
     
