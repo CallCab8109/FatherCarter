@@ -7,6 +7,12 @@ app.use(cors())
 
 const {home, css, js, getImage, getImage2} = require("./controllers/pageCtrl.js")
 
+let Rollbar = require('rollbar')
+let rollbar = new Rollbar({
+  accessToken: process.env.ROLLBAR_TOKEN,
+  captureUncaught: true,
+  captureUnhandledRejections: true,
+})
 
 app.get("/", home)
 app.get("/css", css)
