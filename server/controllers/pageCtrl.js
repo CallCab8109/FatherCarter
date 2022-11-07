@@ -17,6 +17,9 @@ module.exports = {
     getImage2: (req, res) => {
         res.sendFile(path.join(__dirname, "../../pics/FCbg.png"))
     },
+    getConfessionalsPage: (req, res) => {
+        res.sendFile(path.join(__dirname, "../../confessionals.html"))
+    },
     getQuote: (req, res) => {
         const quotes = [
             "Can\'t mistakey if not awakey",
@@ -40,7 +43,7 @@ module.exports = {
     "\"If someone else dies laughing at your joke, you both go to heaven\" -Father Carter",
     "\"Do not let the worms dictate your lifestyle\" -Unknown",
     '"Fear the Father, Love the Daddy. That\'s the power of the home depot" -FC',
-    'When Jesus dissapears for 3 days and comes back it\'s a miracle. When i do it i\'m an "alcoholic" and "ruining the easter egg hunt"',
+    'When Jesus disapears for 3 days and comes back it\'s a miracle. When i do it i\'m an "alcoholic" and "ruining the easter egg hunt"',
     "Our idols include but are not limited to Shrek, Master Oogway, and Myself",
     '"Crying is not an emergency, it\'s an expectation"',
     'Purble Place is one of our heavens',
