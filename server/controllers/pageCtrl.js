@@ -1,4 +1,5 @@
 const path = require('path')
+const database = []
 
 module.exports = {
 
@@ -61,6 +62,29 @@ module.exports = {
             let randomIndex = Math.floor(Math.random() * quotes.length)
             let randomQuote = quotes[randomIndex]
             res.send(randomQuote)
+    },
+    confessionsForm: (req, res) => {
+        const confession = req.body.confession
+
+        let highestId = 0
+        for(let i = 0; i < database.length; i++){
+            if(database[i].id > highestId) {
+                highestId = database[i].id
+            }
+        }
+        highestId++
+
+        let newConfession = {
+            confession: confession,
+            id: highestId
+        }
+
+        database.push(newConfession)
+        res.send(database)
+
+    },
+    getConfessions: (req, res) => {
+        res.send([database])
     }
 
 }

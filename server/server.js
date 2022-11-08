@@ -5,7 +5,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-const {home, css, js, getImage, getImage2, getQuote, getConfessionalsPage} = require("./controllers/pageCtrl.js")
+const {home, css, js, getImage, getImage2, getQuote, getConfessionalsPage, confessionsForm} = require("./controllers/pageCtrl.js")
 // const { getQuote } = require('./controller')
 
 var Rollbar = require("rollbar");
@@ -25,6 +25,7 @@ app.get("/img1", getImage)
 app.get("/img2", getImage2)
 app.get('/api/getQuote', getQuote)
 app.get("/confessionalsPage", getConfessionalsPage)
+app.post("/api/confessionsForm", confessionsForm)
 
 const { PORT } = process.env
 
