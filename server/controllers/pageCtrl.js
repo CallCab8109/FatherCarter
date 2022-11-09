@@ -76,14 +76,6 @@ module.exports = {
             res.send(randomQuote)
     },
     confessionsForm: (req, res) => {
-        // let {confession} = req.body
-        // sequelize.query(`
-        // INSERT INTO confessions(confesssion)
-        // VALUES('${confession}')
-        // `)
-        // .then((dbRes) => {
-        //     res.status(200).send(dbRes[0])
-        // })
 
         const confession = req.body.confession
 
