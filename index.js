@@ -3,7 +3,7 @@ const marquee = document.querySelector('#scrolling')
 const wOw = document.querySelector('#wOw')
 const confessionsForm1 = document.getElementById('confessionsForm')
 const confessionsInput = document.getElementById('confessions-input')
-const confessionsButton = document.querySelector('.confessionsButton')
+const confessionsButton = document.querySelector('#confessionsButton')
 
 
 function getQuote () {
@@ -45,4 +45,4 @@ window.onload = getQuote()
 button.addEventListener('click', getQuote)
 
 confessionsForm1.addEventListener('submit', pushConfession)
-// confessionsButton.addEventListener('click', getConfessions)
+confessionsButton.addEventListener('click', getConfessions)

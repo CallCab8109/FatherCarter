@@ -76,7 +76,6 @@ module.exports = {
             res.send(randomQuote)
     },
     confessionsForm: (req, res) => {
-        console.log(req.body)        
         let {confession} = req.body
 
         sequelize.query(`
@@ -84,31 +83,17 @@ module.exports = {
         VALUES('${confession}');
         `)
         .then((dbRes) => {
-            console.log(dbRes)
             res.status(200).send(dbRes[0])
         })
 
-        // const confession = req.body.confession
-
-        // let highestId = 0
-        // for(let i = 0; i < database.length; i++){
-        //     if(database[i].id > highestId) {
-        //         highestId = database[i].id
-        //     }
-        // }
-        // highestId++
-
-        // let newConfession = {
-        //     confession: confession,
-        //     id: highestId
-        // }
-
-        // database.push(newConfession)
-        // res.send(database)
-
     },
     getConfessions: (req, res) => {
-        res.send([database])
+        sequelize.query(`
+        SELECT * FROM confessions
+        `)
+        .then((dbRes) => {
+            res.status(200).send(dbRes[0])
+        })
     }
 
 }
