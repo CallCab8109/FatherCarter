@@ -1,17 +1,17 @@
 const path = require('path')
-const Sequelize = require('sequelize')
+// const Sequelize = require('sequelize')
 let database = []
 
 let {CONNECTION_STRING} = process.env
 
-const sequelize = new Sequelize(CONNECTION_STRING, {
-    dialect: 'postgres',
-    dialectOptions: {
-        ssl: {
-            rejectUnauthorized: false
-        }
-    }
-  })
+// const sequelize = new Sequelize(CONNECTION_STRING, {
+//     dialect: 'postgres',
+//     dialectOptions: {
+//         ssl: {
+//             rejectUnauthorized: false
+//         }
+//     }
+//   })
 
 module.exports = {
 
@@ -76,6 +76,14 @@ module.exports = {
             res.send(randomQuote)
     },
     confessionsForm: (req, res) => {
+        // let {confession} = req.body
+        // sequelize.query(`
+        // INSERT INTO confessions(confesssion)
+        // VALUES('${confession}')
+        // `)
+        // .then((dbRes) => {
+        //     res.status(200).send(dbRes[0])
+        // })
 
         const confession = req.body.confession
 
