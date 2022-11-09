@@ -80,10 +80,11 @@ module.exports = {
         let {confession} = req.body
 
         sequelize.query(`
-        INSERT INTO confessions(confession)
+        INSERT INTO confessions (confession)
         VALUES('${confession}');
         `)
         .then((dbRes) => {
+            console.log(dbRes)
             res.status(200).send(dbRes[0])
         })
 
