@@ -11,6 +11,7 @@ function getQuote () {
     .then((response) => {
         const quote = response.data
         wOw.innerHTML = quote
+        // console.log(response.data)
     })
 }
 
