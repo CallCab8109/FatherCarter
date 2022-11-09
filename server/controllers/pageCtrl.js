@@ -1,17 +1,17 @@
 const path = require('path')
-// const Sequelize = require('sequelize')
+const Sequelize = require('sequelize')
 let database = []
 
 let {CONNECTION_STRING} = process.env
 
-// const sequelize = new Sequelize(CONNECTION_STRING, {
-//     dialect: 'postgres',
-//     dialectOptions: {
-//         ssl: {
-//             rejectUnauthorized: false
-//         }
-//     }
-//   })
+const sequelize = new Sequelize(CONNECTION_STRING, {
+    dialect: 'postgres',
+    dialectOptions: {
+        ssl: {
+            rejectUnauthorized: false
+        }
+    }
+  })
 
 module.exports = {
 
@@ -76,32 +76,34 @@ module.exports = {
             res.send(randomQuote)
     },
     confessionsForm: (req, res) => {
-        // let {confession} = req.body
-        // sequelize.query(`
-        // INSERT INTO confessions(confesssion)
-        // VALUES('${confession}')
-        // `)
-        // .then((dbRes) => {
-        //     res.status(200).send(dbRes[0])
-        // })
+        console.log(req.body)        
+        let {confession} = req.body
 
-        const confession = req.body.confession
+        sequelize.query(`
+        INSERT INTO confessions(confession)
+        VALUES('${confession}');
+        `)
+        .then((dbRes) => {
+            res.status(200).send(dbRes[0])
+        })
 
-        let highestId = 0
-        for(let i = 0; i < database.length; i++){
-            if(database[i].id > highestId) {
-                highestId = database[i].id
-            }
-        }
-        highestId++
+        // const confession = req.body.confession
 
-        let newConfession = {
-            confession: confession,
-            id: highestId
-        }
+        // let highestId = 0
+        // for(let i = 0; i < database.length; i++){
+        //     if(database[i].id > highestId) {
+        //         highestId = database[i].id
+        //     }
+        // }
+        // highestId++
 
-        database.push(newConfession)
-        res.send(database)
+        // let newConfession = {
+        //     confession: confession,
+        //     id: highestId
+        // }
+
+        // database.push(newConfession)
+        // res.send(database)
 
     },
     getConfessions: (req, res) => {
