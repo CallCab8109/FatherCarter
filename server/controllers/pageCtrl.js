@@ -1,5 +1,6 @@
 const path = require('path')
 const Sequelize = require('sequelize')
+let database = []
 
 let {CONNECTION_STRING} = process.env
 
@@ -75,32 +76,32 @@ module.exports = {
             res.send(randomQuote)
     },
     confessionsForm: (req, res) => {
-        let {confession} = req.body
-        sequelize.query(`
-        INSERT INTO confessions(confesssion)
-        VALUES('${confession}')
-        `)
-        .then((dbRes) => {
-            res.status(200).send(dbRes[0])
-        })
+        // let {confession} = req.body
+        // sequelize.query(`
+        // INSERT INTO confessions(confesssion)
+        // VALUES('${confession}')
+        // `)
+        // .then((dbRes) => {
+        //     res.status(200).send(dbRes[0])
+        // })
 
-        // const confession = req.body.confession
+        const confession = req.body.confession
 
-        // let highestId = 0
-        // for(let i = 0; i < database.length; i++){
-        //     if(database[i].id > highestId) {
-        //         highestId = database[i].id
-        //     }
-        // }
-        // highestId++
+        let highestId = 0
+        for(let i = 0; i < database.length; i++){
+            if(database[i].id > highestId) {
+                highestId = database[i].id
+            }
+        }
+        highestId++
 
-        // let newConfession = {
-        //     confession: confession,
-        //     id: highestId
-        // }
+        let newConfession = {
+            confession: confession,
+            id: highestId
+        }
 
-        // database.push(newConfession)
-        // res.send(database)
+        database.push(newConfession)
+        res.send(database)
 
     },
     getConfessions: (req, res) => {
