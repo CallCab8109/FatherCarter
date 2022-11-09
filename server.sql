@@ -1,0 +1,4 @@
+-- CREATE TABLE confessions (
+--     confessions_id SERIAL PRIMARY KEY,
+--     confession TEXT
+-- )
