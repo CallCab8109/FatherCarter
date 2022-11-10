@@ -45,10 +45,8 @@ window.onload = getQuote()
 button.addEventListener('click', getQuote)
 
 if(document.body.contains(confessionsForm1)){
-
     confessionsForm1.addEventListener('submit', pushConfession)
 }
 if(document.body.contains(confessionsButton)) {
-
     confessionsButton.addEventListener('click', getConfessions)
 }
