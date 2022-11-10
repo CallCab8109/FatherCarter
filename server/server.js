@@ -5,8 +5,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-const {home, css, js, getImage, getImage2, getQuote, getConfessionalsPage, confessionsForm, getConfessions, getAdminPage, getFatherOnly} = require("./controllers/pageCtrl.js")
-// const { getQuote } = require('./controller')
+const {home, css, js, getImage, getImage2, getQuote, getConfessionalsPage, confessionsForm, getConfessions, getAdminPage, getFatherOnly, adminCss} = require("./controllers/pageCtrl.js")
 
 var Rollbar = require("rollbar");
 var rollbar = new Rollbar({
@@ -29,6 +28,7 @@ app.post("/api/confessionsForm", confessionsForm)
 app.get("/api/getConfessions", getConfessions)
 app.get("/adminPage", getAdminPage)
 app.get("/fatherOnly", getFatherOnly)
+app.get("/adminCss", adminCss)
 
 const { PORT } = process.env
 

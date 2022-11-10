@@ -36,7 +36,7 @@ function getConfessions () {
     axios.get("/api/getConfessions/")
     .then((response) => {
     const quote = response.data
-    console.log(quote)
+    con.innerHTML = JSON.stringify(response.data)
     })
 }
 
