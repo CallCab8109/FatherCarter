@@ -33,6 +33,9 @@ module.exports = {
     getConfessionalsPage: (req, res) => {
         res.sendFile(path.join(__dirname, "../../confessionals.html"))
     },
+    getAdminPage: (req, res) => {
+        res.sendFile(path.join(__dirname, "../../admin.html"))
+    },
     getQuote: (req, res) => {
         const quotes = [
             "Can\'t mistakey if not awakey",

@@ -44,5 +44,11 @@ function getConfessions () {
 window.onload = getQuote()
 button.addEventListener('click', getQuote)
 
-confessionsForm1.addEventListener('submit', pushConfession)
-confessionsButton.addEventListener('click', getConfessions)
+if(document.body.contains(confessionsForm1)){
+
+    confessionsForm1.addEventListener('submit', pushConfession)
+}
+if(document.body.contains(confessionsButton)) {
+
+    confessionsButton.addEventListener('click', getConfessions)
+}
