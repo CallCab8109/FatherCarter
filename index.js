@@ -11,7 +11,6 @@ function getQuote () {
     .then((response) => {
         const quote = response.data
         wOw.innerHTML = quote
-        // console.log(response.data)
     })
 }
 
@@ -26,7 +25,7 @@ function pushConfession (event) {
 
     axios.post("/api/confessionsForm/", confession)
     .then((response) => {
-        console.log(response.data)
+        // console.log(response.data)
     })
     .catch((err) => {
         console.log(err)
