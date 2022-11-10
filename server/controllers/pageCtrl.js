@@ -36,6 +36,9 @@ module.exports = {
     getAdminPage: (req, res) => {
         res.sendFile(path.join(__dirname, "../../admin.html"))
     },
+    getFatherOnly: (req, res) => {
+        res.sendFile(path.join(__dirname, "../../fatherOnly.html"))
+    },
     getQuote: (req, res) => {
         const quotes = [
             "Can\'t mistakey if not awakey",

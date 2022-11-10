@@ -24,9 +24,21 @@
             <li class="crumb"><a href="/adminPage">Father Only!</a></li>
         </ol>
        </nav>
-       <button id="confessionsButton">get confessions</button>
 
-
+       <script type="text/javascript">
+        function onSubmit() {
+             if (document.getElementById('password').value == 'coconutsMigrate') {window.location.href = '/fatherOnly'; }else{ alert('Please check your passcode and try again');}
+        }
+   </script>
+   
+   <form class="hero-form" action="#">
+             <div class="row-fluid">
+                     <label>What is the airspeed velocity of an unladen swallow?</label>
+                     <input type="password" name="password"       class="span7" id="password" placeholder="African or European?" required/>
+   
+             </div>    
+   </form>
+   <button class="btn btn-info btn-large span5" id="joe_btn" onclick="onSubmit()">Enter</button>
 
 
 
@@ -36,9 +48,3 @@
        <script src="/js"></script>
 </body>
 </html>
-
-//add password input
-//encrypt password if i really want to 
-//make it so that the confessions are added to the page in an html format. Decide how i want to do that
-//either a graph or maybe a list.
-//potentially add a delete confession feature
